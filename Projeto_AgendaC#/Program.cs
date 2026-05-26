@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Projeto_AgendaC_.Formulários;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +18,7 @@ namespace Projeto_AgendaC_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new MDI_menu());
         }
     }
 }

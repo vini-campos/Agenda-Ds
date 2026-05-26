@@ -46,14 +46,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Dados\DataSet_Agenda.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Agenda.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmCadPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Formulários\frmCadPessoas.Designer.cs">
+      <DependentUpon>frmCadPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\frmConsPessoas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\frmConsPessoas.Designer.cs">
+      <DependentUpon>frmConsPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formulários\MDI_menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formulários\MDI_menu.Designer.cs">
+      <DependentUpon>MDI_menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formulários\frmCadPessoas.resx">
+      <DependentUpon>frmCadPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\frmConsPessoas.resx">
+      <DependentUpon>frmConsPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulários\MDI_menu.resx">
+      <DependentUpon>MDI_menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +89,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Dados\DataSet_Agenda.xsc">
+      <DependentUpon>DataSet_Agenda.xsd</DependentUpon>
+    </None>
+    <None Include="Dados\DataSet_Agenda.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Agenda.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dados\DataSet_Agenda.xss">
+      <DependentUpon>DataSet_Agenda.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +112,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Relatórios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
