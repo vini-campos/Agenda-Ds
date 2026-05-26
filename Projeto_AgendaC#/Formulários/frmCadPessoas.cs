@@ -25,11 +25,11 @@ namespace Projeto_AgendaC_.Formulários
 
         }
 
+        //método para carregar os dados e que deve se mudar cada vez que será feita uma alteração em outro pc
         private void frmCadPessoas_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'dataSet_Agenda.Pessoa'. Você pode movê-la ou removê-la conforme necessário.
             this.pessoaTableAdapter.Fill(this.dataSet_Agenda.Pessoa);
-
         }
     }
 }
