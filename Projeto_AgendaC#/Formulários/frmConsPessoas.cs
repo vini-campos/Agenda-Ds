@@ -23,6 +23,5 @@ namespace Projeto_AgendaC_.Formulários
             this.pessoaTableAdapter.Fill(this.dataSet_Agenda.Pessoa);
 
         }
-
     }
 }
