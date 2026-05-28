@@ -24,5 +24,32 @@ namespace Projeto_AgendaC_.Formulários
 
         }
 
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            string filtro;
+            if (cmbCombo.SelectedIndex == -1)
+            {
+                MessageBox.Show("Escolha a coluna para pesquisar");
+                return;
+            }
+
+            filtro = cmbCombo.Text;
+
+            string busca = cmbBuscar.Text;
+
+            if (busca == "Igual")
+            {
+                filtro += "=" + txtValor.Text + "'";
+               
+            }
+
+            else if (busca == "Que começa com")
+            {
+                filtro += " like " + txtValor.Text + "%";
+            }
+
+            pessoaBindingSource.Filter = filtro;
+
+        }
     }
 }
