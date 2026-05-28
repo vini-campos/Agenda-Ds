@@ -8,6 +8,8 @@ create table Pessoa(
 );
 
 select * from Pessoa;
+select * from Pessoa where cidade = 'São Paulo';
+select * from Pessoa where nome like 'B%';
 
 insert into Pessoa (nome, endereco, cidade, email, data_nascimento)
 values
